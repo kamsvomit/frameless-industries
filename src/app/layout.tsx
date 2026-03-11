@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Archivo, Space_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const archivo = Archivo({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frameless Industries | Sablon Manual Premium Bandung",
     description: "Menerjemahkan visi brand Anda menjadi karya seni di atas kain. Sablon manual dengan dedikasi tinggi.",
-    url: "https://framelessindustries.com",
+    url: "https://frameless-industries.vercel.app",
     siteName: "Frameless Industries",
     images: [
       {
@@ -60,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <body
-        className={`${archivo.variable} ${spaceMono.variable} antialiased bg-[#0a0a0a] text-[#fafafa]`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {children}
       </body>

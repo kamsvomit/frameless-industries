@@ -1,5 +1,6 @@
 import Navbar from "@/src/components/Navbar";
 import Hero from "@/src/components/Hero";
+import Marquee from "@/src/components/Marquee";
 import Gallery from "@/src/components/Gallery";
 import About from "@/src/components/About";
 import Pricing from "@/src/components/Pricing";
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <Marquee />
       <Gallery />
       <About />
       <Pricing />
