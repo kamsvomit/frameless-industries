@@ -1,14 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-gray-muted: #a1a1aa;
-}
-
 :root {
   --bg-primary: #000000;
   --text-primary: #ffffff;
@@ -17,26 +8,25 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
-@layer base {
-  body {
-    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased selection:bg-white selection:text-black;
-  }
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
 }
 
-@layer utilities {
-  .grid-pattern {
-    background-image: 
-        linear-gradient(var(--grid-color) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-  
-  .brutalist-border {
-    @apply border border-[var(--border-color)];
-  }
-  
-  .text-stroke {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-    color: transparent;
-  }
+.grid-pattern {
+  background-image: 
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
